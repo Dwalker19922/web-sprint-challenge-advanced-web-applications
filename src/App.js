@@ -6,6 +6,7 @@ import "./styles.scss";
 import BubblePage from "./components/BubblePage"
 
 function App() {
+  const [state,setState]=useState([])
   const handleLogOut=()=>{
     localStorage.removeItem("token");
   }
@@ -16,7 +17,7 @@ function App() {
           Color Picker Sprint Challenge
           <a onClick={handleLogOut} data-testid="logoutButton" href="#">logout</a>
         </header> 
-        <PrivateRoute path="/bubbles" component={BubblePage}/>
+        <PrivateRoute path="/bubbles" component={BubblePage} appState={state} setAppState={setState}/>
         <Route exact path="/" component={Login}  />
       </div>
     </Router>

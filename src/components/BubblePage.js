@@ -3,19 +3,22 @@ import axiosWithAuth from "../helpers/axiosWithAuth";
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
 
-const BubblePage = () => {
+const BubblePage = (props) => {
+  const{appState,setAppState}=props
+  console.log(props)
   const [colorList, setColorList] = useState([]);
+ 
   useEffect(() => {
     axiosWithAuth().get("/colors")
     .then((response) =>{
-      console.log(response)
       setColorList(response.data)
     })
-    },[colorList])
-    console.log(colorList)
+    },[appState])
+  
+
   return (
     <div className="container">
-      <ColorList colors={colorList} updateColors={setColorList} />
+      <ColorList colors={colorList} updateColors={setAppState} />
       <Bubbles colors={colorList} />
     </div>
   );
