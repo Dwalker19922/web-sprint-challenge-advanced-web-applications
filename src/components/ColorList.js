@@ -1,8 +1,8 @@
-import React, { useState,useE } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import Color from "./Color";
 import EditMenu from "./EditMenu";
 import axiosWithAuth from "../helpers/axiosWithAuth"
+import AddMenu from "./AddMenu";
 const initialColor = {
   color: "",
   code: { hex: "" }
@@ -11,6 +11,7 @@ const initialColor = {
 const ColorList = ({ colors, updateColors }) => {
   console.log(colors)
   const [editing, setEditing] = useState(false);
+  const [add,setAdd]=useState(false)
   const [colorToEdit, setColorToEdit] = useState(initialColor);
   const id = colorToEdit.id
   const editColor = color => {
@@ -23,12 +24,15 @@ const ColorList = ({ colors, updateColors }) => {
     .then((res)=>{
       let filtered = colors.filter((item)=>{return item.id!==res.data.id})
     updateColors([...colors,filtered])
+    setEditing(false)
     })
     .catch((err)=>{
      console.log(err)
     })
   };
-
+  const handleAdd=()=>{
+    setAdd(true)
+  }
   const deleteColor = color => {
     
 
@@ -47,6 +51,8 @@ const ColorList = ({ colors, updateColors }) => {
   return (
     <div className="colors-wrap">
       <p>colors</p>
+      {add===true?<AddMenu update={updateColors} setAdd={setAdd} colors={colors}/>:<button onClick={handleAdd}>add color</button>}
+      
       <ul>
         {colors.map(color => <Color key={color.id} editing={editing} color={color} editColor={editColor} deleteColor={deleteColor}/>)}
       </ul>
