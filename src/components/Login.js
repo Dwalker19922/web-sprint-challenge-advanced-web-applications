@@ -35,7 +35,7 @@ setLogin({
   .then((response)=>{
     console.log(response.data.payload)
     localStorage.setItem('token',response.data.payload)
-    push("/")
+    push("/BubblePage")
 
   })
   }
