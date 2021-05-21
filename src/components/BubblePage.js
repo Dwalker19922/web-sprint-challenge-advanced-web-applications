@@ -11,7 +11,8 @@ const BubblePage = () => {
       console.log(response)
       setColorList(response.data)
     })
-    },[])
+    },[colorList])
+    console.log(colorList)
   return (
     <div className="container">
       <ColorList colors={colorList} updateColors={setColorList} />

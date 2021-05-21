@@ -48,13 +48,13 @@ Your finished project must include all of the following requirements. **Unlike o
 * [d ] Construct an AXIOS request that retrieves an auth token from the server when the username `Lambda` and the password `i<3Lambd4` is passed into the request.
 * [d ] Save the token to localStorage.
 * [d ] Build a `axiosWithAuth` module to create an instance of axios with the authentication header.
-* [ ] Build a `PrivateRoute` component and use it to protect the route that renders the `BubblesPage` component.
-* [ ] In `App.js`, build the backend to the logout button. When pressed, the authentication token within localStorage should be removed.
+* [d ] Build a `PrivateRoute` component and use it to protect the route that renders the `BubblesPage` component.
+* [d] In `App.js`, build the backend to the logout button. When pressed, the authentication token within localStorage should be removed.
 
 #### Consuming the API
 > *Add in the axios requests and state changes needed to connect our api to the web application. Consider the effect of authentication on your api requests.*
 
-* [ ] When `BubblePages` mounts, make a GET request to fetch the color data for your bubbles.
+* [ d] When `BubblePages` mounts, make a GET request to fetch the color data for your bubbles.
 * [ ] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make API requests for to editing and delete data.
 * [ ] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
 
