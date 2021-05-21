@@ -20,20 +20,20 @@ In this project you will create a login page and request a token from the server
 
 ### Task 1: Project Setup
 
-* [ ] Fork and clone this repository.
-* [ ] Create a new branch with the 
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
-* [ ] **RUN** `npm install` to install your dependencies.
-* [ ] **RUN** `npm start` to start your application.
+* [ d] Fork and clone this repository.
+* [d ] Create a new branch with the 
+- [ d] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [d ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [d ] Push commits: git push origin `<firstName-lastName>`.
+* [ d] **RUN** `npm install` to install your dependencies.
+* [ d] **RUN** `npm start` to start your application.
 
 ### Task 2: CodeGrade Setup
 
-* [ ] Open the assignment in Canvas and click on the "Set up git" option.
-* [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
-* [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
-* [ ] Check to see that Codegrade has accepted your git submission.
+* [d ] Open the assignment in Canvas and click on the "Set up git" option.
+* [ d] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
+* [d ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
+* [d ] Check to see that Codegrade has accepted your git submission.
 
 ### Task 3: Project Requirements
 
@@ -42,12 +42,12 @@ Your finished project must include all of the following requirements. **Unlike o
 #### Authentication
 > *Build a login form to authenticate your users along with all the components and utilities needed to support authentication.*
 
-* [ ] In `Login.js`, build all UI and state functionality needed to capture a username and password.
-* [ ] **Make sure that the input for your username and password includes the data-testid="username" and data-testid="password" attributes. These are needed for codegrade testing.**
-* [ ] Build in functionality that would allow an error to be displayed in the provided p tag if either the username or password is incorrect.
-* [ ] Construct an AXIOS request that retrieves an auth token from the server when the username `Lambda` and the password `i<3Lambd4` is passed into the request.
-* [ ] Save the token to localStorage.
-* [ ] Build a `axiosWithAuth` module to create an instance of axios with the authentication header.
+* [ d] In `Login.js`, build all UI and state functionality needed to capture a username and password.
+* [d ] **Make sure that the input for your username and password includes the data-testid="username" and data-testid="password" attributes. These are needed for codegrade testing.**
+* [d ] Build in functionality that would allow an error to be displayed in the provided p tag if either the username or password is incorrect.
+* [d ] Construct an AXIOS request that retrieves an auth token from the server when the username `Lambda` and the password `i<3Lambd4` is passed into the request.
+* [d ] Save the token to localStorage.
+* [d ] Build a `axiosWithAuth` module to create an instance of axios with the authentication header.
 * [ ] Build a `PrivateRoute` component and use it to protect the route that renders the `BubblesPage` component.
 * [ ] In `App.js`, build the backend to the logout button. When pressed, the authentication token within localStorage should be removed.
 
